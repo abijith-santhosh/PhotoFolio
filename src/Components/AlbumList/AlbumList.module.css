@@ -1,0 +1,103 @@
+
+
+.albumList{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+
+
+/* Base styles for the clrBtn (danger outline) */
+.clrBtn {
+    color: #dc3545; /* Danger color */
+    border: 1px solid #dc3545; /* Danger border */
+    background-color: transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hover, focus, and active styles for clrBtn */
+  .clrBtn:hover{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  /* Base styles for the addBtn (primary outline) */
+  .addBtn {
+    color: #0d6efd; /* Primary color */
+    border: 1px solid #0d6efd; /* Primary border */
+    background-color: transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hover, focus, and active styles for addBtn */
+  .addBtn:hover{
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  .albumsContainer{
+    display: grid;
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-auto-rows: 150px;
+    grid-template: repeat(1, 150px) / repeat(auto-fit, minmax(150px, .5fr));
+    margin-bottom: 100px;
+    
+  }
+  .albums{
+    align-items: center;
+    border: 5px solid #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    margin-block: 30px;
+    transition: border-color .3s;
+    width: 100%;
+    background: rgb(134,133,166);
+background: linear-gradient(90deg, rgba(134,133,166,1) 60%, rgba(45,126,135,0.644782913165266) 100%, rgba(178,188,209,1) 100%);
+  }
+
+  .albums img{
+    margin-bottom: 30px;
+    width: 50px;
+  }
+
+  .albums span{
+    background-color: #eee;
+    font-size: 1.1rem;
+    font-weight: 700;
+    justify-self: baseline;
+    padding-block: 5px;
+    text-align: center;
+    transition: .3s;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .albumsContainer {
+        grid-template-columns: 1fr; /* Display albums in a single column */
+    }
+
+    .albums {
+        margin-block: 15px; /* Adjust margin for smaller screens */
+    }
+}
